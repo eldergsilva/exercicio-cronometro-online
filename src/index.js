@@ -1,10 +1,8 @@
-const express = require('express')
-const rotas =require('./rotas')
-const app= express();
- 
-app.get('/iniciar',rotas.iniciarCronometro)
-app.get('/zerar',rotas.iniciarCronometro)
+const express = require('express');
+const rotas = require('./rotas');
+const app = express();
+
+app.use('/', rotas);
 
 app.listen(8000);
-console.log('Servidor no ar ');
-
+console.log('Servidor no ar');
